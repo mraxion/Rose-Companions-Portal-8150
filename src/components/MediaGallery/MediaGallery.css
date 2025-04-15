@@ -1,0 +1,87 @@
+.media-gallery {
+  @apply w-full max-w-7xl mx-auto p-4;
+}
+
+.thumbnails-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.thumbnail-wrapper {
+  @apply relative aspect-square overflow-hidden rounded-lg cursor-pointer bg-gray-100;
+}
+
+.thumbnail-wrapper img {
+  @apply w-full h-full object-cover;
+}
+
+.video-thumbnail {
+  @apply relative w-full h-full;
+}
+
+.play-overlay {
+  @apply absolute inset-0 flex items-center justify-center bg-black bg-opacity-30;
+}
+
+.play-overlay svg {
+  @apply w-12 h-12 text-white opacity-80;
+}
+
+.fullscreen-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center;
+}
+
+.fullscreen-content {
+  @apply relative max-w-7xl w-full mx-4 aspect-video;
+}
+
+.fullscreen-content img,
+.fullscreen-content video {
+  @apply w-full h-full object-contain;
+}
+
+.close-button {
+  @apply absolute -top-12 right-0 text-white p-2 text-3xl hover:text-gray-300 transition-colors;
+}
+
+.nav-button {
+  @apply absolute top-1/2 -translate-y-1/2 bg-white bg-opacity-10 p-3 
+         text-white rounded-full hover:bg-opacity-20 transition-all transform hover:scale-110;
+}
+
+.nav-button.prev {
+  @apply left-4;
+}
+
+.nav-button.next {
+  @apply right-4;
+}
+
+.media-caption {
+  @apply absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4;
+}
+
+.media-caption h3 {
+  @apply text-lg font-semibold mb-1;
+}
+
+.media-caption p {
+  @apply text-sm opacity-90;
+}
+
+@media (max-width: 640px) {
+  .nav-button {
+    @apply p-2;
+  }
+  
+  .media-caption {
+    @apply p-2;
+  }
+  
+  .media-caption h3 {
+    @apply text-base;
+  }
+  
+  .media-caption p {
+    @apply text-xs;
+  }
+}

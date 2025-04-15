@@ -1,0 +1,55 @@
+.location-map-container {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.map-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.map-header h3 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.directions-button {
+  @apply flex items-center gap-2 px-4 py-2 bg-blue-600 text-white
+         rounded-lg hover:bg-blue-700 transition-colors;
+}
+
+.map-wrapper {
+  @apply relative rounded-lg overflow-hidden mb-4;
+}
+
+.map-container {
+  @apply w-full h-64 rounded-lg;
+}
+
+.location-details {
+  @apply space-y-3;
+}
+
+.location-address {
+  @apply flex items-center text-gray-600 bg-gray-50 px-4 py-3 rounded-lg;
+}
+
+.location-info {
+  @apply flex justify-between items-center text-sm;
+}
+
+.info-label {
+  @apply text-gray-500;
+}
+
+.info-value {
+  @apply text-gray-700 font-medium;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .location-map-container {
+    @apply p-4;
+  }
+  
+  .map-container {
+    @apply h-48;
+  }
+}

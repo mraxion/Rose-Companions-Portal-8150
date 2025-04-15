@@ -1,0 +1,79 @@
+.profile-edit-container {
+  @apply max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-lg;
+}
+
+.profile-form {
+  @apply space-y-6;
+}
+
+.profile-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.profile-image-container {
+  @apply relative w-32 h-32 rounded-full overflow-hidden;
+}
+
+.profile-image {
+  @apply w-full h-full object-cover;
+}
+
+.image-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center
+         text-white text-sm cursor-pointer opacity-0 hover:opacity-100 transition-opacity;
+}
+
+.edit-toggle-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg
+         hover:bg-indigo-700 transition-colors;
+}
+
+.form-fields {
+  @apply space-y-4;
+}
+
+.form-group {
+  @apply relative flex items-center;
+}
+
+.field-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg;
+}
+
+.form-input {
+  @apply w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500
+         focus:border-indigo-500 transition-all;
+}
+
+.form-input:disabled {
+  @apply bg-gray-50 cursor-not-allowed;
+}
+
+.phone-container {
+  @apply relative flex-1;
+}
+
+.toggle-phone-btn {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-400
+         hover:text-gray-600 transition-colors;
+}
+
+.save-btn {
+  @apply w-full py-3 bg-green-600 text-white rounded-lg font-medium
+         hover:bg-green-700 transition-colors;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .profile-edit-container {
+    @apply p-4;
+  }
+
+  .profile-image-container {
+    @apply w-24 h-24;
+  }
+
+  .form-input {
+    @apply text-sm;
+  }
+}

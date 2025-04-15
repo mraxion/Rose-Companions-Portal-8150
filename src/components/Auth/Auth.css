@@ -1,0 +1,44 @@
+.register-form-container {
+  @apply max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg;
+}
+
+.register-form {
+  @apply space-y-6;
+}
+
+.form-title {
+  @apply text-2xl font-bold text-center text-gray-800 mb-6;
+}
+
+.form-group {
+  @apply relative;
+}
+
+.field-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.form-input {
+  @apply w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500
+         focus:border-blue-500 transition-all;
+}
+
+.form-input.error {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+.error-message {
+  @apply text-sm text-red-500 mt-1 block;
+}
+
+.submit-btn {
+  @apply w-full py-3 bg-blue-600 text-white rounded-lg font-medium
+         hover:bg-blue-700 transition-colors;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .register-form-container {
+    @apply mx-4;
+  }
+}
