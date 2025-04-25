@@ -1,0 +1,8 @@
+export const questConfig = {
+  GET_STARTED_QUESTID: 'c-greta-get-started',
+  USER_ID: 'u-2381ee95-002d-41fa-9aee-4eecfa7b6561',
+  APIKEY: 'k-16338fcd-2bbd-42b5-a5d7-71c94979e712',
+  TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTIzODFlZTk1LTAwMmQtNDFmYS05YWVlLTRlZWNmYTdiNjU2MSIsImlhdCI6MTc0NDYyMTEwMSwiZXhwIjoxNzQ3MjEzMTAxfQ.OFVYeM_RtPdromgFw6pelyKTDmcZbPPe0FeV8VixXDQ',
+  ENTITYID: 'e-cf1959e5-3bb4-46fc-ad87-cfeb7fa176b4',
+  PRIMARY_COLOR: '#4A90E2'
+};

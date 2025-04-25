@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ProfileProvider } from './components/Profile/ProfileContext';
 import RegisterForm from './components/Auth/RegisterForm';
 import Dashboard from './components/Admin/Dashboard';
@@ -7,6 +7,7 @@ import ProfileEdit from './components/Profile/ProfileEdit';
 import SecureContact from './components/Contact/SecureContact';
 import LocationMap from './components/Location/LocationMap';
 import MediaGallery from './components/MediaGallery/MediaGallery';
+import GetStartedComponent from './components/GetStarted/GetStarted';
 import './App.css';
 
 // Sample data
@@ -29,7 +30,9 @@ function App() {
     <Router>
       <ProfileProvider>
         <div className="app-container">
+          <GetStartedComponent />
           <Routes>
+            <Route path="/" element={<Navigate to="/profile/1" replace />} />
             <Route path="/profile/:id" element={
               <div className="max-w-7xl mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -50,7 +53,16 @@ function App() {
                 </div>
               </div>
             } />
-            {/* Other routes remain the same */}
+            <Route path="/register" element={
+              <div className="max-w-7xl mx-auto px-4 py-8">
+                <RegisterForm onRegister={console.log} />
+              </div>
+            } />
+            <Route path="/admin" element={
+              <div className="max-w-7xl mx-auto px-4 py-8">
+                <Dashboard />
+              </div>
+            } />
           </Routes>
         </div>
       </ProfileProvider>
